@@ -1,0 +1,15 @@
+current directory: /home/hungerbox/project/cn/codingNinjasAssignment/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.4/ext/websocket-driver
+/snap/ruby/212/bin/ruby -I /snap/ruby/212/lib/ruby/3.0.0 -r ./siteconf20210618-16900-98fl5l.rb extconf.rb
+creating Makefile
+
+current directory: /home/hungerbox/project/cn/codingNinjasAssignment/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.4/ext/websocket-driver
+make DESTDIR\= clean
+
+current directory: /home/hungerbox/project/cn/codingNinjasAssignment/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.4/ext/websocket-driver
+make DESTDIR\=
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/hungerbox/project/cn/codingNinjasAssignment/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.4/ext/websocket-driver
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20210618-16900-sior29
