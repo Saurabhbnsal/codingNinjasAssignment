@@ -1,0 +1,40 @@
+<div class="solve-doubt-page">
+    <h1>Solve Doubt</h1>
+    <div class="solve-doubt-container">
+        <div class="doubt-form-div">
+            <div class="doubt">
+                <h2><%= @doubtString['title'] %></h2>
+                <p><%= @doubtString['description'] %></p>
+                <p class="user-info">Asked By: <%= @doubtString['user_name'] %> on <%= DateTime.parse(@doubtString['created_at']).strftime("%h %d, %Y, %H:%M ") %> </p>
+        
+            </div>
+            <div class="comments">
+                <%= @doubtString['comments'].length %> Comments
+                <% @doubtString['comments'].each do |comment| %>
+                     <div class="comment"><%= comment['user_name'] %> : <%= comment['body'] %></div>
+                <% end %>
+            </div>
+        </div>
+
+        <% if @doubt.isResolved == false %>
+        <div class="answer-escalate">
+            <div class="answer-form-div">
+                <h3>Answer</h3>
+                <%= form_with model: @doubts do |form| %>
+                    <div>
+                        <div class="form-container">
+                            <%= form.text_area :answer %>
+                        </div>
+                        <div class="submit-comment-button">
+                            <%= form.button  :Answer %>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+            <div class="escalate-button">
+                <%= button_to "Escalate", :isEscalate => true  %>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>

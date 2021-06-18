@@ -1,0 +1,82 @@
+// Place all the styles related to the solveDoubt controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.solve-doubt-page{
+    padding:0 5%;
+    .solve-doubt-container{
+        display: flex;
+        flex-direction: row;
+        .doubt-form-div{
+            background-color: lightsteelblue;
+            padding:20px;
+            margin-bottom: 10px;
+            width: 65%;
+            border: 1px solid #3a1593;
+            .doubt{
+                border-bottom: 1px solid;
+                .user-info{
+                    text-align: right;
+                    font-size: 12px;
+                }
+            }    
+            .comments{
+                padding-top: 20px;
+                .comment{
+                    padding: 10px;
+                    border: 1px solid;
+                    margin: 10px 0;
+                    background: #e6e6e6;
+                }
+            }
+        }
+        .answer-escalate{
+            width: 33%;
+            margin-left: 2%;
+            
+        .answer-form-div{
+            background-color: lightsteelblue;
+            padding:20px;
+            border : 1px solid #3a1593;
+            min-height: 160px;
+            height: 100%;
+            .form-container{
+                width: 95%;
+                textarea{
+                    width: 100%;
+                }
+            }
+            .submit-comment-button{
+                width: 70px;
+                float: right;
+                padding-right:10px;
+                margin-top: 10px;
+                button{
+                    height: 33px;
+                    width: 100%;
+                    background-color: #3a1593;
+                    border: #3a1593 1px solid;
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+        }
+        .escalate-button{
+            width: 70px;
+                float: right;
+                padding-right:10px;
+                margin-top: 10px;
+                input[type="submit" i]{
+                    height: 33px;
+                    width: 100%;
+                    color: #3a1593;
+                    border: #3a1593 1px solid;
+                    font-weight: bold;
+                    background-color: white;
+                }
+
+        }
+    }
+
+    }
+   
+}

@@ -1,0 +1,13 @@
+<div class="ta-doubts">
+    <h1>Solve Doubts</h1>
+    <% @doubts.each do |doubt| %>
+        <div class="doubt-div">
+        <div class="doubt-title">
+            <%= doubt.title%>
+            </div>
+            <div class="accept-button">
+            <%= button_to "Accept", :action => "accept",  name: "doubt_id",value: doubt['id'] %>
+            </div>
+        </div>
+  <% end %>
+</div>

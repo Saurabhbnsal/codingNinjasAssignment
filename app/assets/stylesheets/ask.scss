@@ -1,0 +1,32 @@
+// Place all the styles related to the ask controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.ask-doubt{
+    padding:0 8%;
+    .doubt-form-div {
+        background-color: lightgray;
+         padding: 20px;
+         margin-bottom: 10px;
+         border: 2px solid;
+         .comment-input{
+            margin: 10px 0;
+            textarea{
+                width: 100% !important;
+            }
+         }
+         .submit-button-container{
+            button{
+                width: 100px;
+                height: 30px;
+                background: #3a14b2;
+                color: white;
+                outline: none;
+                font-weight: 600;
+            
+            }
+        }
+         
+     }
+     
+     
+}

@@ -1,0 +1,25 @@
+// Place all the styles related to the TaDoubts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.ta-doubts{
+    padding:0 5%;
+    .doubt-div{
+        border: 1px solid black;
+        background: lightsteelblue;
+        padding: 20px;
+        flex-direction: row;
+        display: flex;
+        .doubt-title{
+            width: 80%;
+        }
+        input[type="submit" i]{
+            border: #3a1593 1px solid;
+            padding: 10px;
+            background: white;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    
+}

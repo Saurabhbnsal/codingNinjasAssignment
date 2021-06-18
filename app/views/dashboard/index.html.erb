@@ -1,0 +1,43 @@
+<div class="dashboard">
+    <h1>Dashboard</h1>
+    <div class="user-details">
+        <div class="detail-container">
+            <div class="container-value"> <%= @total_doubts %> </div>
+            <div class="container-title">Doubts Asked</div>
+        </div>
+        <div class="detail-container">
+            <div class="container-value"> <%= @resolved_doubts %> </div>
+            <div class="container-title">Doubts Resolved</div>
+        </div>
+        <div class="detail-container">
+            <div class="container-value"> <%= @escalated_doubts %> </div>
+            <div class="container-title">Doubts Escalated</div>
+        </div>
+        <div class="detail-container">
+            <div class="container-value"> 
+                <% if @average_resolution_time_hours.to_i > 0 %>
+                    <span><%= @average_resolution_time_hours %> Hours</span>
+                <% end %> 
+                    <span><%=@average_resolution_time_minutes %> Minutes</span>
+                </div>
+            <div class="container-title">Avg. Doubt Resolution Time</div>
+        </div>
+    </div>
+
+    <div class="ta-reports">
+     <h3>TAs Report</h3>
+        <div class="tas">
+        <% @users.each do |user| %>
+            <div class="ta">
+                <div class="ta-name"><%= user['name'] %></div>
+                <div class="ta-details">
+                <span>Doubts Accepted: <%= user['picked'] %> | Doubts Resolved: <%= user['resolved'] %> | Doubts Escalated: <%= user['escalated'] %> | Avg. Doubt Activity Time: <% if  user['averageResolutionTimeHours'].to_i > 0 %>
+                    <span><%=  user['averageResolutionTimeHours'].to_i %> Hours</span>
+                <% end %> 
+                    <span><%=  user['averageResolutionTimeMinuted'].to_i %> Minutes</span></span>
+                </div>
+            </div>
+        <% end %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<% if request.original_fullpath != '/login' && request.original_fullpath != '/' %>
+    <div class="header" >
+        <div class="header-links">
+            <h3>CODING NINJAS</h3>
+            <span> 
+                 <% if  request.original_fullpath == '/ask-doubt'%> | <%= link_to "Doubts", doubts_path %><% end %>
+             </span>
+             <span> 
+                <% if  request.original_fullpath == '/doubts'%>| <%= link_to "Raise Doubt", ask_doubt_path %><% end %>
+             </span>
+             <span> 
+                <% if  request.original_fullpath == '/ta-doubts'%>| <%= link_to "Dashboard", dashboard_path %><% end %>
+             </span>
+             <span> 
+                <% if  request.original_fullpath == '/dashboard'%>| <%= link_to "Raised Doubts", ta_doubts_path %><% end %>
+             </span>
+             <span> 
+                <% if  request.original_fullpath.include? '/solve-doubt'%>| <%= link_to "Raised Doubts", ta_doubts_path %> | <%= link_to "Dashboard", dashboard_path %><% end %>
+             </span>
+        </div>
+        <div class="logout-button">
+            <%= link_to "Logout", login_path %>
+        </div>
+    </div>
+<% end %>
+

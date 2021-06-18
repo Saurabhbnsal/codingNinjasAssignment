@@ -1,0 +1,33 @@
+// Place all the styles related to the Login controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.login{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login-container{
+        background-color: #dfe5f0;
+        padding:30px;
+        h1{
+            text-align: center;
+        }
+        .doubt-form-div{
+            margin-top: 10px;
+            .username{
+                margin-top: 20px;
+            }
+            .password{
+                margin-top: 20px;
+            }
+            .button{
+                margin-top: 10px;
+                align-self: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+}

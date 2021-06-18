@@ -1,0 +1,42 @@
+<div class="student-all-doubts">
+  <h1>Home</h1>
+  <div class="doubt-conut"><%= @doubtStrings.length %> Doubts</div>
+  <% @doubtStrings.each do |doubt| %>
+    <div class="doubt-form-div">
+      <div class="doubt">
+        <div class="doubt-container">
+          <div style="width:90%;"> 
+            <h2><%= doubt['title'] %></h2>
+            <p><%= doubt['description'] %></p>
+          </div>
+          <% if doubt['isResolved'] == true %>
+            <div class="resolved-button"> Resolved</div>
+          <% end %>
+        </div>
+        <p class="user-info">Asked By: <%= doubt['user_name'] %> on <%= DateTime.parse(doubt['created_at']).strftime("%h %d, %Y, %H:%M ") %> </p>
+        <% if doubt['answer'] && doubt['isResolved'] %>
+          <div>
+          <b>Answer:</b> <%= doubt['answer']%>
+          <p>Answered By <%= doubt['ta_user_name']%></p>
+          </div>
+        <% end %>
+      </div>
+      <div class="comments">
+        <%= doubt['comments'].length %> <% if doubt['comments'].length == 1%>Comment <% else %> Comments <% end%>
+        <% doubt['comments'].each do |comment| %>
+          <div class="comment"><%= comment['user_name'] %> : <%= comment['body'] %></div>
+        <% end %>
+        <%= form_with model: @doubtComment do |form| %>
+          <div class="add-comment-container">
+            <div class="comment-input">
+              <%= form.text_area :body, placeholder: "Add Comment" %>
+            </div>
+           <div class="submit-comment-button">
+              <%= form.button  :Comment , name: "doubt_id",value: doubt['id'] %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

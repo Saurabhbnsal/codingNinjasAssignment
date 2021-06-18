@@ -1,0 +1,18 @@
+<div class="ask-doubt">
+  <h1>Raise Doubt</h1>
+  <%= form_with model: @doubt do |form| %>
+    <div class="doubt-form-div">
+      <div class="comment-input">
+        <%= form.label :title %><br>
+        <%= form.text_area :title %>
+      </div>
+      <div class="comment-input">
+        <%= form.label :description %><br>
+        <%= form.text_area :description %>
+      </div>
+      <div class="submit-button-container">
+        <%= form.button 'Ask Doubt' %>
+      </div>
+    </div>
+  <% end %>
+</div>

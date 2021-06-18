@@ -1,0 +1,51 @@
+// Place all the styles related to the Dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.dashboard{
+    padding:0 5%;
+    .user-details{
+        display: flex;
+        flex-direction: row;
+        .detail-container{
+            width: 22%;
+            background-color: lightgrey;
+            margin: 0 1.5%;
+            padding: 10px;
+            border: 1px solid;
+            height: 100px;
+            .container-value{
+                text-align: center;  
+                margin-top: 20px;
+                font-size: 25px;
+                margin-bottom: 40px;
+            }
+            .container-title{
+                text-align: center;
+            }
+        }
+    }
+    .ta-reports{
+        background-color: lightgrey;
+        border: 1px solid;
+        margin-top: 20px;
+        padding:5px 25px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-bottom:30px;
+        .tas{
+            .ta{
+                padding: 15px;
+                background-color: #dfe5f0;
+                border: 1px solid darkgrey;
+                .ta-name{
+                    font-size: 18px;
+                    font-weight:600;
+                }
+                .ta-details{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

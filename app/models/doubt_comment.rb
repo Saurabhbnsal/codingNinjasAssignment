@@ -1,0 +1,2 @@
+class DoubtComment < ApplicationRecord
+end
